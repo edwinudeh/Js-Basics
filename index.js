@@ -120,7 +120,7 @@
 
 ///control structure
 
-const age = 19;
+//const age = 19;
 const isOldEnough = age >= 18;
 
 if(isOldEnough) {
@@ -253,10 +253,65 @@ if (scoreDolphins > scoreKoalos && scoreDolphins >= 100) {
 }
 
 
+//// Switch statement
+
+const day = 'tuesday'
+
+switch (day) {
+    case 'monday':
+        console.log('plan course structure');
+        console.log('Go to coding meet up');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code examples');
+        break;
+    case 'friday':
+        console.log('Record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend : D');
+        break;
+        default:
+            console.log('Not a valid day!');           
+}
+
+if (day === 'monday') {
+    console.log('plan course structure');
+    console.log('Go to coding meet up');
+} else if (day === 'tuesday') {
+    console.log('Prepare theory videos');
+} else if (day === 'wednesday'|| day === 'thursday') {
+    console.log('Write code examples');
+} else if (day === friday) {
+    console.log('Record videos');
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log('Enjoy the weekend : D');
+} else {
+    console.log('Not a valid day');
+}
 
 
 
+/// expression
+
+3 + 4
+1991
+true & false & !false
+
+if (23 > 10) {
+    const str = '23 is bigger'
+}
 
 
 
+const ageYear = 23;
+ageYear >= 18 ? console.log('I like to drink wine 🍷'):
+console.log('I like to drink water 💧');
 
+const drink = age >= 18 ? 'wine 🍷' : 'water💧';
+console.log(drink);
