@@ -219,7 +219,7 @@ if (ageBirth === 18) {
 
 
 
-const favourite = prompt("What's your favourite number?");
+const favourite = Number(prompt("What's your favourite number?"));
 console.log(favourite);
 console.log(typeof favourite);
 
@@ -234,6 +234,27 @@ if(favourite === 23) {
 }
 
 if (favourite !== 23) console.log('why not 23');
+
+
+// coding challenge 3
+
+const scoreDolphins = (96 + 80 + 89) / 3;
+const scoreKoalos = (80 + 91 + 100) / 3;
+console.log(scoreDolphins, scoreKoalos);
+
+if (scoreDolphins > scoreKoalos && scoreDolphins >= 100) {
+    console.log('Dolphins win the trophy');
+} else if (scoreKoalos > scoreDolphins && scoreKoalos >= 100) {
+    console.log('kaolos win the trophy');
+} else if (scoreDolphins === scoreKoalos) {
+    console.log('both win the trophy!');
+} else {
+    console.log('No one wins the trophy!');
+}
+
+
+
+
 
 
 
