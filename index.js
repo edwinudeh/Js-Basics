@@ -121,14 +121,14 @@
 ///control structure
 
 //const age = 19;
-const isOldEnough = age >= 18;
+//const isOldEnough = age >= 18;
 
-if(isOldEnough) {
-    console.log('sarah can start driving license');
-} else {
-    const yearsLeft = 18 - age;
-    console.log(`sarah is too young. wait another ${yearsLeft} years:)`);
-}
+//if(isOldEnough) {
+//    console.log('sarah can start driving license');
+//} else {
+ //   const yearsLeft = 18 - age;
+ //   console.log(`sarah is too young. wait another ${yearsLeft} years:)`);
+//}
 
 //if() {
 
@@ -219,51 +219,51 @@ if (ageBirth === 18) {
 
 
 
-const favourite = Number(prompt("What's your favourite number?"));
-console.log(favourite);
-console.log(typeof favourite);
+//const favourite = Number(prompt("What's your favourite number?"));
+//console.log(favourite);
+//console.log(typeof favourite);
 
-if(favourite === 23) {
-    console.log('Cool! 23 is an amazing number');
-} else if (favourite === 7) {
-    console.log('7 is a cool number');
-} else if (favourite === 9) {
-    console.log('9 is a cool number');
-} else {
-    console.log('Number is not 23 or 7 or 9');
-}
+//if(favourite === 23) {
+//    console.log('Cool! 23 is an amazing number');
+//} else if (favourite === 7) {
+//    console.log('7 is a cool number');
+//} else if (favourite === 9) {
+////    console.log('9 is a cool number');
+//} else {
+//    console.log('Number is not 23 or 7 or 9');
+//}
 
-if (favourite !== 23) console.log('why not 23');
+//if (favourite !== 23) console.log('why not 23');
 
 
 // coding challenge 3
 
-const scoreDolphins = (96 + 80 + 89) / 3;
-const scoreKoalos = (80 + 91 + 100) / 3;
-console.log(scoreDolphins, scoreKoalos);
+///const scoreDolphins = (96 + 80 + 89) / 3;
+//const scoreKoalos = (80 + 91 + 100) / 3;
+//console.log(scoreDolphins, scoreKoalos);
 
-if (scoreDolphins > scoreKoalos && scoreDolphins >= 100) {
-    console.log('Dolphins win the trophy');
-} else if (scoreKoalos > scoreDolphins && scoreKoalos >= 100) {
-    console.log('kaolos win the trophy');
-} else if (scoreDolphins === scoreKoalos) {
-    console.log('both win the trophy!');
-} else {
-    console.log('No one wins the trophy!');
-}
+//if (scoreDolphins > scoreKoalos && scoreDolphins >= 100) {
+//    console.log('Dolphins win the trophy');
+//} else if (scoreKoalos > scoreDolphins && scoreKoalos >= 100) {
+//    console.log('kaolos win the trophy');
+//} else if (scoreDolphins === scoreKoalos) {
+//    console.log('both win the trophy!');
+//} else {
+//    console.log('No one wins the trophy!');
+//}
 
 
 //// Switch statement
 
 const day = 'tuesday'
 
-switch (day) {
+switch(day) {
     case 'monday':
         console.log('plan course structure');
         console.log('Go to coding meet up');
         break;
-    case 'tuesday':
-        console.log('Prepare theory videos');
+    case 'tuesday':    
+        console.log('prepare theory videos');
         break;
     case 'wednesday':
     case 'thursday':
@@ -273,27 +273,30 @@ switch (day) {
         console.log('Record videos');
         break;
     case 'saturday':
-    case 'sunday':
+    case  'sunday':
         console.log('Enjoy the weekend : D');
         break;
-        default:
-            console.log('Not a valid day!');           
+    default:
+        console.log('Not a valid day');
+       
 }
 
-if (day === 'monday') {
-    console.log('plan course structure');
-    console.log('Go to coding meet up');
-} else if (day === 'tuesday') {
-    console.log('Prepare theory videos');
-} else if (day === 'wednesday'|| day === 'thursday') {
-    console.log('Write code examples');
-} else if (day === friday) {
-    console.log('Record videos');
-} else if (day === 'saturday' || day === 'sunday') {
-    console.log('Enjoy the weekend : D');
-} else {
-    console.log('Not a valid day');
-}
+
+
+//if (day === 'monday') {
+//    console.log('plan course structure');
+//    console.log('Go to coding meet up');
+//} else if (day === 'tuesday') {
+//    console.log('Prepare theory videos');
+//} else if (day === 'wednesday'|| day === 'thursday') {
+///    console.log('Write code examples');
+//} else if (day === friday) {
+//    console.log('Record videos');
+//} else if (day === 'saturday' || day === 'sunday') {
+//    console.log('Enjoy the weekend : D');
+//} else {
+//    console.log('Not a valid day');
+//}
 
 
 
@@ -304,14 +307,31 @@ if (day === 'monday') {
 true & false & !false
 
 if (23 > 10) {
-    const str = '23 is bigger'
+    const str = '23 is bigger';
 }
 
 
 
-const ageYear = 23;
+const ageYear = 13;
 ageYear >= 18 ? console.log('I like to drink wine 🍷'):
 console.log('I like to drink water 💧');
 
-const drink = age >= 18 ? 'wine 🍷' : 'water💧';
+const drink = ageYear >= 18 ? 'wine 🍷' : 'water💧';
 console.log(drink);
+
+let drink2;
+if (ageYear >= 18) {
+    drink2 = 'wine🍷';
+} else {
+    drink2 = 'water 💧';
+}
+console.log(drink2);
+
+///challenge 4 ////////////////
+
+const bill = 275;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log('The bill was ' + bill , 'the tip was ' + tip, 'and the total value ' + bill+tip);console.log('The bill was ' + bill, 'the tip was ' + tip, 'and the total value ' + bill + tip);
+
+
+
