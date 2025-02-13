@@ -334,4 +334,45 @@ const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 console.log('The bill was ' + bill , 'the tip was ' + tip, 'and the total value ' + bill+tip);console.log('The bill was ' + bill, 'the tip was ' + tip, 'and the total value ' + bill + tip);
 
 
+/////// strict mode //////
+'use strick';
 
+let hasDriversLicense = false;
+const passTest = true;
+
+if (passTest) hasDriversLicense = true;
+if (hasDriversLicense) console.log('I can drive :D'); 
+
+// const interface = 'Audio';
+// const private = 534;
+
+
+function logger() {
+    console.log('My name is jonas');
+}
+
+// calling //running // invokling function
+logger();
+logger();
+logger();
+
+function food() {
+    console.log('beans and rice')
+}
+food();
+
+function fruitProcessor(apples, oranges) {
+    console.log(apples, oranges);
+    const juice = 'juice with ' +  apples + ' apples and ' + oranges + ' oranges.'
+    return juice;
+}
+
+const applejuice = fruitProcessor(5, 0);
+console.log(applejuice);
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
+
+
+const num = Number('23');
+console.log(num);
