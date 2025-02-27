@@ -376,3 +376,285 @@ console.log(appleOrangeJuice);
 
 const num = Number('23');
 console.log(num);
+
+
+
+// function decdlaration 
+
+function calcAge1(birthYeah) {
+    return 2037 - birthYeah;
+}
+
+const age1 = calcAge1(1991);
+console.log(age1);
+//function expression
+const calage2 = function (birthyeah) {
+    return 2037 - birthyeah;
+}
+
+const age2 = calage2(1991);
+
+console.log(age1, age2);
+
+// Arrow function
+
+const calAge3 = birthYeah => 2037 - birthYeah;
+const age3 = calAge3(1991);
+console.log(age3);
+
+// const yearUntilRetirement = birthyeah => {
+//     const age = 2037 - birthyeah;
+//     const retirement = 65 - age;
+//     return retirement;
+// }
+
+// console.log(yearUntilRetirement(1991, 'jonas'));
+// console.log(yearUntilRetirement(1980, 'Bob'));
+
+//// function calling other function
+
+
+function cutFruitPieces(fruit) {
+    return fruit * 3;
+}
+
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+
+
+    console.log(apples, oranges);
+    const juice = 'juice with ' +  apples + ' apples and ' + oranges + ' oranges.'
+    return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
+/// Reviewing function
+
+const calAge = function(birthyeah) {
+    return 2037 - birthyeah;
+}
+
+const yearsUntilRetirement = function (birthYeah, firstName)
+ {
+    const age = calAge(birthYeah);
+    const retirement = 65 - age;
+    return retirement;
+
+    if (retirement > 0) {
+        return retirement;
+        console.log(firstName + 'retires in '+ retirement + 'years');
+    } else {
+        return -1;
+        console.log(firstName + ' has already retire')
+    }
+}
+
+console.log(yearsUntilRetirement(1991, 'jonas'));
+console.log(yearsUntilRetirement(1970, 'Mike'));
+
+
+
+// function calcAge(birthyear, Name) {
+//     const age = 2037 - birthYear;
+//     return age
+// }
+
+// const calcAge = function(birthYear, Name) {
+//     return 2037 - birthYear
+// }
+
+// const calcage = bithyear => 2037 - birthYear
+
+/// code 5 challenge 1 ///
+
+const calcAverage = (a, b, c) => (a +  b + c) / 3;
+console.log(calcAverage(3, 4, 5));
+
+// Test 1
+const scoreDolphins = calcAverage(44, 23, 71);
+const scorekoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scorekoalas);
+
+const checkWinner = function(avgDolhins, avgKoalas) {
+    if (avgDolhins >= 2 * avgKoalas) {
+        console.log('Dolphins win 🏆 ' + avgDolhins + ' vs ' + avgKoalas);
+    } else if (avgKoalas >= 2 * avgDolhins) {
+        console.log('Koalas win 🏆 ' + avgKoalas + ' vs ' + avgDolhins);
+    } else {
+        console.log('No team wins...');
+    }
+}
+checkWinner(scoreDolphins, scorekoalas);
+
+checkWinner(576, 111);
+
+// Test 2
+// scoreDolphins = calcAverage(85, 54, 42);
+// scorekoalas = calcAverage(23, 34, 27);
+// console.log(scoreDolphins, scorekoalas);
+// checkWinner(scoreDolphins, scorekoalas);
+
+//Arrays
+
+const friend1 = 'Micheal';
+const friend2 = 'steven';
+const friend3 = 'peter';
+
+// const friends = ['Micheal', 'steven', 'peter'];
+// console.log(friends);
+
+// const years = new Array(1991, 1984, 2008, 2020);
+
+// console.log(friends[0]);
+// console.log(friends[2]);
+
+// console.log(friends.length);
+
+
+// const jonas = ['jonas', 'schmedtmann', 2037 - 1991, 'teacher', friends];
+// console.log(jonas);
+// console.log(jonas.length);
+
+
+/// basic arrays operation//
+
+const friends = ['Micheal', 'steven', 'peter'];
+friends.push('jay');
+console.log(friends);
+console.log(friends.length);
+
+friends.unshift('john');
+console.log(friends);
+
+///Remove elements
+
+friends.pop();
+const popped = friends.pop();
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf('steven'));
+console.log(friends.indexOf('Bob'));
+
+console.log(friends.includes('steven'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes('23'));
+
+if (friends.includes('steven')) {
+    console.log('you have a new friend called Steven');
+}
+
+if (friends.includes('Bob')) {
+    console.log('you dont have a new friend')
+}
+
+/// 6 challenge #2
+const calcTip = function(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills, tips);
+
+
+// introduction to objects
+// const jonas = {
+//     firstName: 'jonas',
+//     lastName: 'schmedtmann',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['Micheal', 'Peter', 'Steven']
+//  };
+
+//  console.log(jonas);
+
+//  console.log(jonas.lastName);
+// console.log(jonas['lastName']);
+
+
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+
+// const interestedIn = prompt('what do you want to know about jonas? choose between firstName, lastName, age, job, and friends');
+
+// if (jonas[interestedIn]) {
+//     console.log(jonas[interestedIn]);
+// } else {
+//     console.log('wrong request! choose between firstName, lastName, age, job, and friends');
+// }
+
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonasschmedtman';
+
+
+const jonas = {
+    firstName: 'jonas',
+    lastName: 'schmedtmann',
+    birthyeah: 1991,
+    job: 'teacher',
+    friends: ['Micheal', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+    
+
+    // calcAge: function(birthYeah) {
+    //     return 2037 - birthYeah;
+    // }
+
+    calcAge: function() {
+        this.age = 2037 - this.birthyeah;
+        return this.age;
+    }
+
+ };
+
+ console.log(jonas.calcAge());
+ 
+ console.log(jonas.calcAge());
+ console.log(jonas.calcAge());
+ console.log(jonas.calcAge());
+ 
+
+//  challenge
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+      this.bmi = this.mass / this.height ** 2;
+      return this.bmi;
+    }
+}
+
+const John = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function() {
+      this.bmi = this.mass / this.height ** 2;
+      return this.bmi;
+      }
+}
+
+ mark.calcBMI();
+ John.calcBMI();
+
+ console.log(mark.bmi, John.bmi);
+
+
+ if (mark.bmi > John.bmi) {
+    console.log(mark.fullName + ' `s BMI ' + (mark.bmi) + ' is higher than ' + John.fullName + ' `s BMI ' + (John.bmi))
+ } else if (John.bmi > mark.bmi) {
+    console.log(John.fullName + ' `s BMI ' + (John.bmi) + ' is higher than ' + mark.fullName + ' `s BMI ' + (mark.bmi))
+ }
