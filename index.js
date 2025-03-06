@@ -471,13 +471,13 @@ console.log(yearsUntilRetirement(1970, 'Mike'));
 
 /// code 5 challenge 1 ///
 
-const calcAverage = (a, b, c) => (a +  b + c) / 3;
-console.log(calcAverage(3, 4, 5));
+// const calcAverage = (a, b, c) => (a +  b + c) / 3;
+// console.log(calcAverage(3, 4, 5));
 
 // Test 1
-const scoreDolphins = calcAverage(44, 23, 71);
-const scorekoalas = calcAverage(65, 54, 49);
-console.log(scoreDolphins, scorekoalas);
+// const scoreDolphins = calcAverage(44, 23, 71);
+// const scorekoalas = calcAverage(65, 54, 49);
+// console.log(scoreDolphins, scorekoalas);
 
 const checkWinner = function(avgDolhins, avgKoalas) {
     if (avgDolhins >= 2 * avgKoalas) {
@@ -488,7 +488,7 @@ const checkWinner = function(avgDolhins, avgKoalas) {
         console.log('No team wins...');
     }
 }
-checkWinner(scoreDolphins, scorekoalas);
+// checkWinner(scoreDolphins, scorekoalas);
 
 checkWinner(576, 111);
 
@@ -555,16 +555,16 @@ if (friends.includes('Bob')) {
 }
 
 /// 6 challenge #2
-const calcTip = function(bill) {
-    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-}
+// const calcTip = function(bill) {
+//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-console.log(bills, tips);
+// console.log(bills, tips);
 
 
 // introduction to objects
@@ -598,31 +598,31 @@ console.log(bills, tips);
 // jonas['twitter'] = '@jonasschmedtman';
 
 
-const jonas = {
-    firstName: 'jonas',
-    lastName: 'schmedtmann',
-    birthyeah: 1991,
-    job: 'teacher',
-    friends: ['Micheal', 'Peter', 'Steven'],
-    hasDriversLicense: true,
+// const jonas = {
+//     firstName: 'jonas',
+//     lastName: 'schmedtmann',
+//     birthyeah: 1991,
+//     job: 'teacher',
+//     friends: ['Micheal', 'Peter', 'Steven'],
+//     hasDriversLicense: true,
     
 
     // calcAge: function(birthYeah) {
     //     return 2037 - birthYeah;
     // }
 
-    calcAge: function() {
-        this.age = 2037 - this.birthyeah;
-        return this.age;
-    }
+    // calcAge: function() {
+    //     this.age = 2037 - this.birthyeah;
+    //     return this.age;
+    // }
 
- };
-
- console.log(jonas.calcAge());
  
- console.log(jonas.calcAge());
- console.log(jonas.calcAge());
- console.log(jonas.calcAge());
+
+//  console.log(jonas.calcAge());
+ 
+//  console.log(jonas.calcAge());
+//  console.log(jonas.calcAge());
+//  console.log(jonas.calcAge());
  
 
 //  challenge
@@ -658,3 +658,103 @@ const John = {
  } else if (John.bmi > mark.bmi) {
     console.log(John.fullName + ' `s BMI ' + (John.bmi) + ' is higher than ' + mark.fullName + ' `s BMI ' + (mark.bmi))
  }
+
+ /// iteration : the for loop
+
+//  console.log('lifting weight repetition 1 🏋️');
+//  console.log('lifting weight repetition 2 🏋️');
+//  console.log('lifting weight repetition 3 🏋️');
+//  console.log('lifting weight repetition 4 🏋️');
+//  console.log('lifting weight repetition 5 🏋️');
+//  console.log('lifting weight repetition 6 🏋️');
+//  console.log('lifting weight repetition 7 🏋️');
+//  console.log('lifting weight repetition 8 🏋️');
+//  console.log('lifting weight repetition 9 🏋️');
+//  console.log('lifting weight repetition 10 🏋️');
+
+ /// for loop keeps running while condition is TRUE
+
+//  for(let rep = 1; rep <= 10; rep++) {
+//     console.log('lifting weight repetition ' + rep + ' 🏋️');
+//  }
+
+ // looping arrays
+
+ const jonas = {
+        firstName: 'jonas',
+        lastName: 'schmedtmann',
+        age: 2037 - 1991,
+        job: 'teacher',
+        friends: ['Micheal', 'Peter', 'Steven']
+     };
+
+for (let i = 0; i < jonas.length; i++) {
+  console.log(jonas[i]);
+}
+
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+/// continue and break
+for (let i = 0; i < jonas.length; i++) {
+    console.log(jonas[i], typeof jonas[i]);
+  }
+
+  ///looping backwards and loops in loops
+  // while loops
+
+  
+
+
+ let rep = 1
+while (rep <= 10) {
+    console.log('WHILE: lifting weight repetition ' + rep + ' 🏋️');
+    rep++
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log('you rolled a ' + dice);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6)console.log('loop is about to end...');
+}
+
+//// challenge 4
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  }
+  
+  
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+  
+for (let i = 0; i < bills.length; i++) {
+  const tips = calcTip(bills[i]);   
+  tips.push(tip);
+  totals.push(tip + bills (i));
+  }
+  
+console.log(bills, tips, totals);
+
+const calcAverage = function(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    return sum / arr.length;
+
+}
+  
+console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
